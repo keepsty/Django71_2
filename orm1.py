@@ -21,3 +21,4 @@ if __name__ == '__main__':
 
     obj = [models.Dept(dept_name='华强北{}'.format(i)) for i in range(12)]
     models.Dept.objects.bulk_create(obj, 100)
+    print(1)
