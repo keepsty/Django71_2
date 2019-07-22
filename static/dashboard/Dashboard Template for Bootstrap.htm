@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://v3.bootcss.com/examples/dashboard/ -->
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://v3.bootcss.com/favicon.ico">
+
+    <title>学生管理系统</title>
+
+    <!-- 自定义Bootstrap CSS -->
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="Dashboard_files/dashboard.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://v3.bootcss.com/examples/dashboard/#">Project name</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="https://v3.bootcss.com/examples/dashboard/#">Dashboard</a></li>
+                <li><a href="https://v3.bootcss.com/examples/dashboard/#">Settings</a></li>
+                <li><a href="https://v3.bootcss.com/examples/dashboard/#">Profile</a></li>
+                <li><a href="https://v3.bootcss.com/examples/dashboard/#">Help</a></li>
+            </ul>
+            <form class="navbar-form navbar-right">
+                <input type="text" class="form-control" placeholder="Search...">
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <li class="active"><a href="https://v3.bootcss.com/examples/dashboard/#">Overview <span class="sr-only">(current)</span></a>
+                </li>
+                <li><a href="https://v3.bootcss.com/examples/dashboard/#">Reports</a></li>
+                <li><a href="https://v3.bootcss.com/examples/dashboard/#">Analytics</a></li>
+                <li><a href="https://v3.bootcss.com/examples/dashboard/#">Export</a></li>
+            </ul>
+            <ul class="nav nav-sidebar">
+                <li><a href="https://v3.bootcss.com/examples/dashboard/">Nav item</a></li>
+                <li><a href="https://v3.bootcss.com/examples/dashboard/">Nav item again</a></li>
+                <li><a href="https://v3.bootcss.com/examples/dashboard/">One more nav</a></li>
+                <li><a href="https://v3.bootcss.com/examples/dashboard/">Another nav item</a></li>
+                <li><a href="https://v3.bootcss.com/examples/dashboard/">More navigation</a></li>
+            </ul>
+            <ul class="nav nav-sidebar">
+                <li><a href="https://v3.bootcss.com/examples/dashboard/">Nav item again</a></li>
+                <li><a href="https://v3.bootcss.com/examples/dashboard/">One more nav</a></li>
+                <li><a href="https://v3.bootcss.com/examples/dashboard/">Another nav item</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h1 class="page-header">管理系统
+                <small>MySQL/Linux</small>
+            </h1>
+            <!--start 学生管理面板-->
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">学生管理</h3>
+                </div>
+                <!--start 面板body-->
+                <!--<div class="row">-->
+
+                <!--start GO搜索栏-->
+                <div class="panel-body">
+                    <div class="col-md-4">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for...">
+                            <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">搜&nbsp;索</button>
+                                </span>
+                        </div><!-- /input-group -->
+                    </div>
+                    <!--end GO搜索栏-->
+
+                    <!--start 添加 按钮-->
+                    <div class="pull-right">
+                        <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#myModal"
+                        >添加
+                        </button>
+                        <!--start 添加按钮的模态框-->
+                        <div id="myModal" class="modal fade" id="myModal" tabindex="-1" role="dialog"
+                             aria-labelledby="myModalLabel">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!--start form 表单  模态框内部 -->
+                                        <form class="form-horizontal">
+                                            <div class="form-group">
+                                                <label for="inputFirstName"
+                                                       class="col-sm-2 control-label">FirstName</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="inputFirstName"
+                                                           placeholder="FirstName">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputSecondName"
+                                                       class="col-sm-2 control-label">SecondName</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="inputSecondName"
+                                                           placeholder="SecondName">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputUserName"
+                                                       class="col-sm-2 control-label">userName</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="inputUserName"
+                                                           placeholder="UserName">
+                                                </div>
+                                            </div>
+
+                                        </form>
+                                        <!--end form 表单  模态框内部 -->
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close
+                                        </button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end 模态框-->
+                    </div>
+                    <!--start table 表单-->
+                    <div style="margin-top: 6%">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Username</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--end table 表单-->
+                    <!-- start 分页-->
+                    <!--<div class="row">-->
+                    <div class="pull-right">
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- end 分页-->
+                </div>
+
+
+                <!--</div>-->
+            </div>
+            <!--end 面板body-->
+        </div>
+
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../jquery-3.3.1.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
