@@ -27,4 +27,4 @@ if __name__ == '__main__':
     print(5)
     print(5)
     print(5)
-    print('tohuko is here 1/3')
+    print('tohuko is here complete')
